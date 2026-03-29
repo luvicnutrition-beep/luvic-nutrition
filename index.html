@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luvic Nutrition | Ofertas Fitness</title>
 
-<title>Luvic Nutrition - Promoções Fitness</title>
-
-<link rel="icon" href="https://raw.githubusercontent.com/LuanFaria/MaxPower/befc369f4455e67efc71298abfc593677ce9a3d9/banner%20(1).png">
+<!-- FAVICON -->
+<link rel="icon" href="https://raw.githubusercontent.com/LuanFaria/luvic.nutrition/refs/heads/main/logo.png">
 
 <!-- META PIXEL -->
 <script>
@@ -18,271 +16,233 @@ n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '2009470879917311');
 fbq('track', 'PageView');
 </script>
 
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2009470879917311&ev=PageView&noscript=1"/>
+</noscript>
+
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
 
-body{
-font-family:Arial;
-background:#0b0b0b;
-color:white;
-margin:0;
-text-align:center;
+:root {
+    --neon-green: #00ff9f;
+    --neon-pink: #ff00cc;
 }
 
-.banner img{
-width:100%;
-max-height:420px;
-object-fit:cover;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
+                url('https://raw.githubusercontent.com/LuanFaria/luvic.nutrition/refs/heads/main/FUNDO.png') center/cover no-repeat fixed;
+    color: #fff;
 }
 
-/* HERO */
-.hero{
-padding:30px 20px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
 }
 
-.hero h1{
-font-size:32px;
-margin-bottom:10px;
+/* LOGO */
+.logo {
+    margin-bottom: 30px;
 }
 
-.hero p{
-color:#ccc;
-font-size:18px;
-margin-bottom:20px;
+.logo img {
+    max-width: 180px;
+    filter: drop-shadow(0 0 15px var(--neon-green))
+            drop-shadow(0 0 25px var(--neon-pink));
 }
 
-.urgencia{
-color:#ff4444;
-font-weight:bold;
+/* TOPO */
+.top-cta {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
-.prova{
-color:#aaa;
-font-size:14px;
+.top-cta a { flex: 1; }
+
+.top-cta img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0,255,159,0.3);
+    transition: 0.3s;
 }
 
-/* CTA */
-.cta{
-display:inline-block;
-background:#ff0000;
-color:white;
-padding:18px 40px;
-border-radius:10px;
-font-size:20px;
-font-weight:bold;
-text-decoration:none;
-margin:20px 0;
-box-shadow:0 10px 25px rgba(255,0,0,0.4);
-transition:0.3s;
+.top-cta a:hover img {
+    transform: scale(1.03);
+    box-shadow: 0 0 60px var(--neon-green),
+                0 0 100px var(--neon-pink);
 }
 
-.cta:hover{
-transform:scale(1.05);
-background:#cc0000;
+/* HEADLINE */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 900;
+    background: linear-gradient(90deg, var(--neon-green), var(--neon-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* BENEFÍCIOS */
-.beneficios{
-padding:30px;
-font-size:18px;
-line-height:30px;
+.sub {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 40px;
 }
 
-/* PRODUTOS */
-.produtos{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-padding:30px;
-max-width:1100px;
-margin:auto;
+/* LAYOUT */
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-/* 🔥 CARD COM EFEITO */
-.card{
-background:#141414;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 0 20px rgba(255,0,0,0.15);
-transition:0.3s;
-display:flex;
-flex-direction:column;
+/* IMAGENS LATERAIS */
+.side-img img {
+    max-width: 260px;
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 0 50px rgba(255,0,204,0.4);
 }
 
-.card:hover{
-transform:translateY(-10px) scale(1.02);
-box-shadow:0 0 35px rgba(255,0,0,0.6);
+/* BOTÕES */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 420px;
+    width: 100%;
 }
 
-.card img{
-width:100%;
-height:200px;
-object-fit:cover;
+.btn {
+    width: 100%;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff;
 }
 
-.card h2{
-color:#ff1e1e;
-margin-top:15px;
+/* WHATS */
+.btn-whatsapp {
+    background: #25D366;
+    border: 3px solid var(--neon-green);
+    animation: pulse 1.5s infinite;
 }
 
-.card p{
-padding:0 15px;
-flex-grow:1;
-color:#bbb;
+@keyframes pulse {
+    0% { box-shadow: 0 0 20px #25D366; }
+    50% { box-shadow: 0 0 40px #00ff9f; }
+    100% { box-shadow: 0 0 20px #25D366; }
 }
 
-/* BOTÃO PRODUTO */
-.botao{
-background:#ff1e1e;
-color:white;
-padding:12px 25px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-margin:20px;
-transition:0.3s;
+.whats-info {
+    font-size: 0.9rem;
+    color: #aaa;
 }
 
-.botao:hover{
-background:#b30000;
-transform:scale(1.05);
+/* EBOOK */
+.btn-comprar {
+    border: 3px solid var(--neon-pink);
+    box-shadow: 0 0 25px var(--neon-pink);
 }
 
-/* FOOTER */
-.footer{
-background:#0a0a0a;
-padding:20px;
-color:#777;
+.btn-comprar:hover {
+    background: var(--neon-pink);
+    color: #000;
 }
 
-/* CONTADOR */
-.contador-grupo{
-position:fixed;
-bottom:110px;
-right:25px;
-background:#111;
-color:#ff4444;
-padding:10px 18px;
-border-radius:20px;
-font-size:14px;
-box-shadow:0 5px 15px rgba(0,0,0,0.5);
+/* LOJA */
+.btn-loja {
+    border: 2px solid #777;
 }
 
-/* WHATSAPP */
-.whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-padding:22px 35px;
-border-radius:60px;
-font-weight:bold;
-font-size:20px;
-text-decoration:none;
-box-shadow:0 10px 25px rgba(0,0,0,0.5);
-animation:pulse 2s infinite;
+/* RESPONSIVO */
+@media(max-width: 900px){
+    .main-content {
+        flex-direction: column;
+    }
 }
-
-@keyframes pulse{
-0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7);}
-70%{box-shadow:0 0 0 20px rgba(37,211,102,0);}
-100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
-}
-
 </style>
-
 </head>
 
 <body>
 
-<div class="banner">
-<img src="https://raw.githubusercontent.com/LuanFaria/MaxPower/befc369f4455e67efc71298abfc593677ce9a3d9/banner%20(1).png">
+<div class="container">
+
+    <!-- LOGO -->
+    <div class="logo">
+        <img src="https://raw.githubusercontent.com/LuanFaria/luvic.nutrition/refs/heads/main/logo.png">
+    </div>
+
+    <!-- TOPO -->
+    <div class="top-cta">
+        <a href="https://chat.whatsapp.com/G68Ew63LcTZFSk98MfH3hw" target="_blank">
+            <img src="https://raw.githubusercontent.com/LuanFaria/luvic.nutrition/refs/heads/main/Ofertas%20exclusivas%20no%20grupo%20VIP.png">
+        </a>
+
+        <a href="https://pay.kiwify.com.br/g4QErHi" target="_blank">
+            <img src="https://raw.githubusercontent.com/LuanFaria/luvic.nutrition/refs/heads/main/CAPA.png">
+        </a>
+    </div>
+
+    <!-- HEADLINE -->
+    <h1>🔥 ATÉ 60% OFF EM SUPLEMENTOS FITNESS</h1>
+    <div class="sub">
+        💪 Ofertas diárias + 100 receitas fitness para transformar seus resultados
+    </div>
+
+    <!-- CONTEÚDO -->
+    <div class="main-content">
+
+        <!-- IMAGEM GRUPO -->
+        <div class="side-img">
+            <img src="https://raw.githubusercontent.com/LuanFaria/luvic.nutrition/refs/heads/main/GRUPO%20OFF.png">
+        </div>
+
+        <!-- BOTÕES -->
+        <div class="buttons">
+
+            <a href="https://chat.whatsapp.com/G68Ew63LcTZFSk98MfH3hw" target="_blank" class="btn btn-whatsapp">
+                🚀 ENTRAR NO GRUPO VIP AGORA
+            </a>
+
+            <div class="whats-info">
+                🔥 +120 pessoas já estão no grupo
+            </div>
+
+            <a href="https://pay.kiwify.com.br/g4QErHi" target="_blank" class="btn btn-comprar">
+                📘 COMPRAR EBOOK
+            </a>
+
+            <a href="#" class="btn btn-loja">
+                🛒 LOJA EM BREVE
+            </a>
+
+        </div>
+
+        <!-- SUA IMAGEM -->
+        <div class="side-img">
+            <img src="https://raw.githubusercontent.com/LuanFaria/luvic.nutrition/refs/heads/main/EU.jpg">
+        </div>
+
+    </div>
+
 </div>
-
-<div class="hero">
-
-<h1>🔥 ATÉ 60% OFF EM SUPLEMENTOS FITNESS</h1>
-
-<p>💪 Whey, Creatina e Pré-Treino com preços promocionais todos os dias</p>
-
-<a class="cta"
-href="https://chat.whatsapp.com/G68Ew63LcTZFSk98MfH3hw"
-target="_blank"
-onclick="fbq('track','Lead')">
-🚀 ENTRAR NO GRUPO AGORA
-</a>
-
-<div class="prova">🔥 +120 pessoas já estão no grupo</div>
-<div class="urgencia">⚠️ Pode fechar a qualquer momento</div>
-
-</div>
-
-<div class="beneficios">
-✅ Ofertas reais todos os dias<br>
-✅ Produtos originais<br>
-✅ Compra segura pelo Mercado Livre
-</div>
-
-<div class="produtos">
-
-<div class="card">
-<img src="https://raw.githubusercontent.com/LuanFaria/MaxPower/a77939bae1beb8e0d6b357d04e86af18bc5a03da/proteina_2.png">
-<h2>Proteínas</h2>
-<p>Ganhe massa muscular e acelere sua recuperação.</p>
-<a class="botao" href="https://meli.la/2eyHQ6k" target="_blank">VER OFERTA</a>
-</div>
-
-<div class="card">
-<img src="https://raw.githubusercontent.com/LuanFaria/MaxPower/b1a8fd0ea798aff4350d124c2ee6af71e6494f56/creatina_3.png">
-<h2>Creatina</h2>
-<p>Mais força e desempenho comprovado.</p>
-<a class="botao" href="https://meli.la/1AGP4gS" target="_blank">VER OFERTA</a>
-</div>
-
-<div class="card">
-<img src="https://raw.githubusercontent.com/LuanFaria/MaxPower/a77939bae1beb8e0d6b357d04e86af18bc5a03da/pre_treino.png">
-<h2>Pré Treino</h2>
-<p>Energia e foco para treinos intensos.</p>
-<a class="botao" href="https://meli.la/1beneC8" target="_blank">VER OFERTA</a>
-</div>
-
-<div class="card">
-<img src="https://raw.githubusercontent.com/LuanFaria/MaxPower/a77939bae1beb8e0d6b357d04e86af18bc5a03da/kits.png">
-<h2>Kits Promoção</h2>
-<p>Combos com descontos exclusivos.</p>
-<a class="botao" href="https://meli.la/2ugHrdg" target="_blank">VER OFERTAS</a>
-</div>
-
-</div>
-
-<a class="cta"
-href="https://chat.whatsapp.com/G68Ew63LcTZFSk98MfH3hw"
-target="_blank"
-onclick="fbq('track','Lead')">
-🔥 QUERO RECEBER AS PROMOÇÕES
-</a>
-
-<div class="footer">
-© 2026 Luvic Nutrition
-</div>
-
-<div class="contador-grupo">
-🔥 +120 pessoas no grupo
-</div>
-
-<a class="whatsapp"
-href="https://chat.whatsapp.com/G68Ew63LcTZFSk98MfH3hw"
-target="_blank"
-onclick="fbq('track','Lead')">
-📲 Entrar no grupo
-</a>
 
 </body>
 </html>
