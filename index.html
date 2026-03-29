@@ -57,7 +57,6 @@ body {
     margin-bottom: 40px;
 }
 
-/* 👉 MOBILE: empilha */
 @media(max-width: 768px){
     .top-cta {
         flex-direction: column;
@@ -69,6 +68,16 @@ body {
 .top-cta img {
     width: 100%;
     border-radius: 20px;
+    transition: all 0.35s ease;
+    box-shadow: 0 0 40px rgba(0,255,159,0.25);
+}
+
+/* 🔥 EFEITO VOLTOU */
+.top-cta a:hover img {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 60px var(--neon-green),
+        0 0 120px var(--neon-pink);
 }
 
 /* HEADLINE */
@@ -95,12 +104,11 @@ h1 {
     gap: 80px;
 }
 
-/* ELEMENTOS */
+/* ORDEM */
 .side-img { order: 1; }
 .buttons { order: 2; }
 .right-img { order: 3; }
 
-/* 👉 MOBILE: muda ordem */
 @media(max-width: 900px){
     .main-content {
         flex-direction: column;
@@ -117,6 +125,7 @@ h1 {
 .right-img img {
     max-width: 240px;
     border-radius: 18px;
+    box-shadow: 0 0 40px rgba(255,0,204,0.3);
 }
 
 /* BOTÕES */
@@ -162,6 +171,17 @@ h1 {
     color: #000;
 }
 
+/* LOJA */
+.btn-loja {
+    border: 2px solid #aaa;
+    opacity: 0.9;
+}
+
+.btn-loja:hover {
+    border-color: #fff;
+    box-shadow: 0 0 25px #fff;
+}
+
 /* RODAPÉ */
 footer {
     margin-top: 80px;
@@ -195,12 +215,10 @@ footer {
     <!-- CONTEÚDO -->
     <div class="main-content">
 
-        <!-- ESQUERDA -->
         <div class="side-img">
             <img src="https://raw.githubusercontent.com/LuanFaria/luvic.nutrition/refs/heads/main/GRUPO%20OFF.png">
         </div>
 
-        <!-- BOTÕES -->
         <div class="buttons">
 
             <a href="https://chat.whatsapp.com/G68Ew63LcTZFSk98MfH3hw" target="_blank" class="btn btn-whatsapp">
@@ -211,9 +229,13 @@ footer {
                 📘 COMPRAR EBOOK
             </a>
 
+            <!-- 🛒 VOLTOU -->
+            <a href="#" class="btn btn-loja">
+                🛒 ACESSAR LOJA
+            </a>
+
         </div>
 
-        <!-- DIREITA -->
         <div class="right-img">
             <img src="https://raw.githubusercontent.com/LuanFaria/luvic.nutrition/refs/heads/main/EU.jpg">
         </div>
