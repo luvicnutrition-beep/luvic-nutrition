@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Luvic Nutrition | Ofertas Fitness</title>
 
-<!-- FAVICON -->
 <link rel="icon" href="https://raw.githubusercontent.com/LuanFaria/luvic.nutrition/refs/heads/main/logo.png">
 
 <!-- META PIXEL -->
@@ -47,7 +46,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -56,7 +55,13 @@ body {
     display: flex;
     gap: 25px;
     margin-bottom: 40px;
-    flex-wrap: wrap;
+}
+
+/* 👉 MOBILE: empilha */
+@media(max-width: 768px){
+    .top-cta {
+        flex-direction: column;
+    }
 }
 
 .top-cta a { flex: 1; }
@@ -64,14 +69,6 @@ body {
 .top-cta img {
     width: 100%;
     border-radius: 20px;
-    box-shadow: 0 0 40px rgba(0,255,159,0.3);
-    transition: 0.3s;
-}
-
-.top-cta a:hover img {
-    transform: scale(1.03);
-    box-shadow: 0 0 60px var(--neon-green),
-                0 0 100px var(--neon-pink);
 }
 
 /* HEADLINE */
@@ -87,7 +84,7 @@ h1 {
 .sub {
     font-size: 1.1rem;
     color: #ccc;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 /* LAYOUT */
@@ -95,32 +92,47 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    gap: 80px;
 }
 
-/* IMAGENS LATERAIS */
-.side-img img {
-    max-width: 260px;
-    width: 100%;
+/* ELEMENTOS */
+.side-img { order: 1; }
+.buttons { order: 2; }
+.right-img { order: 3; }
+
+/* 👉 MOBILE: muda ordem */
+@media(max-width: 900px){
+    .main-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .buttons { order: 1; }
+    .side-img { order: 2; }
+    .right-img { order: 3; }
+}
+
+/* IMAGENS */
+.side-img img,
+.right-img img {
+    max-width: 240px;
     border-radius: 18px;
-    box-shadow: 0 0 50px rgba(255,0,204,0.4);
 }
 
 /* BOTÕES */
 .buttons {
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    max-width: 420px;
+    gap: 20px;
+    max-width: 450px;
     width: 100%;
 }
 
 .btn {
     width: 100%;
-    padding: 20px;
-    font-size: 1.2rem;
-    font-weight: 800;
+    padding: 24px;
+    font-size: 1.3rem;
+    font-weight: 900;
     border-radius: 50px;
     text-decoration: none;
     color: #fff;
@@ -135,13 +147,8 @@ h1 {
 
 @keyframes pulse {
     0% { box-shadow: 0 0 20px #25D366; }
-    50% { box-shadow: 0 0 40px #00ff9f; }
+    50% { box-shadow: 0 0 45px #00ff9f; }
     100% { box-shadow: 0 0 20px #25D366; }
-}
-
-.whats-info {
-    font-size: 0.9rem;
-    color: #aaa;
 }
 
 /* EBOOK */
@@ -155,16 +162,11 @@ h1 {
     color: #000;
 }
 
-/* LOJA */
-.btn-loja {
-    border: 2px solid #777;
-}
-
-/* RESPONSIVO */
-@media(max-width: 900px){
-    .main-content {
-        flex-direction: column;
-    }
+/* RODAPÉ */
+footer {
+    margin-top: 80px;
+    font-size: 0.9rem;
+    color: #777;
 }
 </style>
 </head>
@@ -193,7 +195,7 @@ h1 {
     <!-- CONTEÚDO -->
     <div class="main-content">
 
-        <!-- IMAGEM GRUPO -->
+        <!-- ESQUERDA -->
         <div class="side-img">
             <img src="https://raw.githubusercontent.com/LuanFaria/luvic.nutrition/refs/heads/main/GRUPO%20OFF.png">
         </div>
@@ -205,26 +207,22 @@ h1 {
                 🚀 ENTRAR NO GRUPO VIP AGORA
             </a>
 
-            <div class="whats-info">
-                🔥 +120 pessoas já estão no grupo
-            </div>
-
             <a href="https://pay.kiwify.com.br/g4QErHi" target="_blank" class="btn btn-comprar">
                 📘 COMPRAR EBOOK
             </a>
 
-            <a href="#" class="btn btn-loja">
-                🛒 LOJA EM BREVE
-            </a>
-
         </div>
 
-        <!-- SUA IMAGEM -->
-        <div class="side-img">
+        <!-- DIREITA -->
+        <div class="right-img">
             <img src="https://raw.githubusercontent.com/LuanFaria/luvic.nutrition/refs/heads/main/EU.jpg">
         </div>
 
     </div>
+
+    <footer>
+        © 2026 Luvic Nutrition
+    </footer>
 
 </div>
 
