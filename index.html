@@ -38,17 +38,22 @@ src="https://www.facebook.com/tr?id=2009470879917311&ev=PageView&noscript=1"/>
 
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
-                url('https://raw.githubusercontent.com/LuanFaria/luvic.nutrition/refs/heads/main/FUNDO.png') center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+                url('https://raw.githubusercontent.com/LuanFaria/luvic.nutrition/refs/heads/main/FUNDO.png') center/cover no-repeat;
     color: #fff;
 }
 
-/* CONTAINER */
+/* CONTAINER CENTRAL */
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 30px 20px 50px;
+    padding: 40px 20px;
     text-align: center;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* IMAGEM */
@@ -71,9 +76,9 @@ body {
         0 0 120px var(--neon-pink);
 }
 
-/* TEXTO */
+/* HEADLINE */
 h1 {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
     margin-bottom: 10px;
     font-weight: 900;
     background: linear-gradient(90deg, var(--neon-green), var(--neon-pink));
@@ -81,17 +86,19 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
+/* SUB */
 .sub {
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: #ccc;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 /* BOTÃO */
 .btn-whatsapp {
     display: inline-block;
     width: 100%;
-    max-width: 380px; /* 🔥 trava largura no PC */
+    max-width: 360px;
+    margin: 0 auto;
     padding: 18px 25px;
     font-size: 1.2rem;
     font-weight: 900;
@@ -110,10 +117,14 @@ h1 {
     100% { box-shadow: 0 0 20px #25D366; }
 }
 
-/* MOBILE AJUSTE */
+/* MOBILE */
 @media(max-width: 480px){
     h1 {
         font-size: 1.8rem;
+    }
+
+    .container {
+        padding: 30px 15px;
     }
 
     .btn-whatsapp {
@@ -135,10 +146,12 @@ h1 {
         </a>
     </div>
 
-    <!-- TEXTO -->
-    <h1>🔥 ATÉ 60% OFF EM SUPLEMENTOS</h1>
+    <!-- HEADLINE -->
+    <h1>🔥 ATÉ 60% OFF — ENTRE NO GRUPO VIP ANTES QUE LOTE</h1>
+
+    <!-- SUB -->
     <div class="sub">
-        💪 Ofertas exclusivas liberadas todos os dias no grupo VIP
+        🚫 Não postamos duas vezes o mesmo desconto
     </div>
 
     <!-- BOTÃO -->
